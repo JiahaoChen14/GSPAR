@@ -1,0 +1,60 @@
+RaR_persp:
+	format:
+		scenes: I_alley, I_avenue, I_bridge, I_bypath, I_garden, O_car, O_lion, O_statuary, O_stone, O_windmill
+		images: dataset/RaR_persp/{scene}/images_4
+		sparse: dataset/RaR_persp/{scene}/sparse/0
+		3dgs model: output/RaR_persp/{scene}/checkpoints/final.pt
+		training_config: output/RaR_persp/{scene}/training_config.yaml
+		output: GSPAR/outputs/RaR_persp/{scene}
+		voxel size: 0.05
+		scene type: outdoor
+		nvblox version:
+			sparse: dataset/RaR_persp/{scene}/sparse/0
+			depth: dataset/depth/RaR_persp/{scene}/depth_maps
+
+mipnerf360:
+	format:
+		scenes: bicycle, bonsai, counter, flowers, garden, kitchen, room, stump, treehill
+		images: dataset/mipnerf360/{scene}/images_4
+		sparse: dataset/mipnerf360/{scene}/sparse/0
+		3dgs model: output/mipnerf360/{scene}/checkpoints/final.pt
+		training_config: output/mipnerf360/{scene}/training_config.yaml
+		output: GSPAR/outputs/mipnerf360/{scene}
+		voxel size: 0.05
+		scene type: outdoor
+		nvblox version:
+			sparse: dataset/mipnerf360/{scene}/sparse/0
+			depth: dataset/depth/mipnerf360/{scene}/depth_maps
+		scenes: bonsai, counter, kitchen, room:
+			scene type: indoor
+
+tanks_and_temples:
+	format:
+		scenes: family, francis, horse, lighthouse, playground, train
+		images: dataset/tanks_and_temples/{scene}/images_2
+		sparse: dataset/tanks_and_temples/{scene}/sparse/0
+		3dgs model: output/tanks_and_temples/{scene}/checkpoints/final.pt
+		training_config: output/tanks_and_temples/{scene}/training_config.yaml
+		output: GSPAR/outputs/tanks_and_temples/{scene}
+		voxel size: 0.05
+		scene type: outdoor
+		nvblox version:
+			sparse: dataset/tanks_and_temples/{scene}/sparse/0
+			depth: dataset/depth/tanks_and_temples/{scene}/depth_maps
+		scenes: m60, panther：
+			scene type: indoor
+		
+scannetpp:
+	format:
+		scenes: Classroom, Kitchen, Office, Storage, Bedroom, ConferenceRoom, CopyRoom, Plant, Apartment, Bathroom
+		images: dataset/scannetpp/{scene}/images_2
+		sparse: dataset/scannetpp/{scene}/sparse/0
+		3dgs model: output/scannetpp/{scene}/checkpoints/final.pt
+		training_config: output/scannetpp/{scene}/training_config.yaml
+		output: GSPAR/outputs/scannetpp/{scene}
+		gt: dataset/scannetpp/{scene}/gt
+		voxel size: 0.05
+		scene type: indoor
+		nvblox version:
+			sparse: dataset/scannetpp/{scene}/sparse/0
+			depth: dataset/depth/scannetpp/{scene}/depth_maps

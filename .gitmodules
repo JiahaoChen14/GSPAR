@@ -1,0 +1,6 @@
+[submodule "src/ICGui"]
+	path = src/ICGui
+	url = ../../nerficg-project/icgui
+[submodule "src/Methods/HTGS"]
+	path = src/Methods/HTGS
+	url = https://github.com/nerficg-project/HTGS.git

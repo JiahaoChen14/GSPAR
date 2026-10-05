@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.DS_Store
+/outputs
+data_tools/
+bak/
+tmp/
+*.txt
